@@ -1,7 +1,7 @@
 pipeline {
   agent any
 
-  stages    
+  stages {
     
     stage('SonarQube Analysis') {
       environment {
@@ -13,5 +13,5 @@ pipeline {
             }   
         }
     }
-
+  }
 }
