@@ -3,7 +3,13 @@ pipeline {
   agent any
 
   stages {
-        stage('Install') {
+    stage('Checkout') {
+        steps {
+          // Get some code from a GitHub repository
+          git branch: 'main', url: 'https://github.com/Pinkivikram/lbg-vat-calculator.git'
+        }
+    }
+    stage('Install') {
         steps {
             // Install the ReactJS dependencies
             sh "npm install"
